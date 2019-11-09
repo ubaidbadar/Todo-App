@@ -25,6 +25,7 @@ nav i{
 }
 nav a:hover{
     background: #e1f5fe;
+    color: #000;
 }
 .openNav{
     left: -288px;
@@ -48,4 +49,19 @@ nav a:hover{
 }
 .openNavMenu span{
     width: 22px !important;
+}
+
+@media only screen and (max-width: 1000px){
+    nav{
+        left: -288px;
+    }
+    .openNav{
+        left: 0;
+    }
+    #menu span{
+        width: 22px;
+    }
+    .openNavMenu span{
+        width: 16px !important;
+    }
 }

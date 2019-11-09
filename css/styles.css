@@ -26,7 +26,7 @@ button, .btn{
     font-weight: bold;
     text-transform: uppercase;
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1000px){
     body{
         margin-left: 0 !important;
     }
