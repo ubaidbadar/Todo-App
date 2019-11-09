@@ -17,10 +17,9 @@ a{
 input{
     background: transparent;
     border: none;
-    outline: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid;
     display: block;
-    width: 100%;
+    width: 99%;
     padding: 10px 0 8px 0;
     font-size: 15px;
     box-sizing: border-box;
@@ -30,6 +29,7 @@ form{
     max-width: 700px;
     margin: auto;
     font-weight: bold;
+    width: 85%;
 }
 label{
     display: flex;
@@ -54,7 +54,7 @@ button{
 }
 #alert{
     width: 300px;
-    background: red;
+    background: #8bc34a;
     font-weight: bold;
     font-size: 16px;
     text-align: center;

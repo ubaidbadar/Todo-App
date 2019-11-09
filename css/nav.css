@@ -5,7 +5,7 @@ nav{
     background: #ffffff;
     box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.13);
     position: fixed;
-    left: -288px;
+    left: 0;
     top: 0;
 }
 nav h3{
@@ -27,7 +27,7 @@ nav a:hover{
     background: #e1f5fe;
 }
 .openNav{
-    left: 0;
+    left: -288px;
 }
 #menu{
     position: fixed;
@@ -36,7 +36,7 @@ nav a:hover{
     cursor: pointer;
 }
 #menu span{
-    width: 22px;
+    width: 15px;
     display: block;
     height: 3px;
     background: #fff;
@@ -47,5 +47,5 @@ nav a:hover{
     width: 22px !important;
 }
 .openNavMenu span{
-    width: 16px !important;
+    width: 22px !important;
 }

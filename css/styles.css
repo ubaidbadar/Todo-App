@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 body{
-    margin: 0;
+    margin: 0 0 0 288px;
     background: #f2f2f2;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.8);
@@ -8,6 +8,7 @@ body{
 *{
     font-family: 'Open Sans', sans-serif;
     transition: ease-in 0.3s all;
+    outline: none;
 }
 h2, h3{
     color: #000;
@@ -24,4 +25,9 @@ button, .btn{
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
+}
+@media only screen and (max-width: 800px){
+    body{
+        margin-left: 0 !important;
+    }
 }
