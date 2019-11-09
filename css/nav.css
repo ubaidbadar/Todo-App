@@ -1,0 +1,53 @@
+nav{
+    min-width: 240px;
+    height: 100vh;
+    padding: 0 24px;
+    background: #ffffff;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.13);
+    position: fixed;
+    left: -288px;
+    transition: ease-in 0.3s all;
+    top: 0;
+}
+nav h3{
+    margin: 32px 0 24px 0;
+}
+nav a{
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    margin: 4px 0;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+}
+nav i{
+    margin-right: 16px;
+    color: #8bc34a;
+}
+nav a:hover{
+    background: #e1f5fe;
+}
+.openNav{
+    left: 0;
+}
+#menu{
+    position: fixed;
+    right: 16px;
+    top: 12px;
+    cursor: pointer;
+}
+#menu span{
+    width: 22px;
+    display: block;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    margin-left: auto;
+    transition: linear 0.1s all;
+}
+#middleBor{
+    width: 22px !important;
+}
+.openNavMenu span{
+    width: 16px !important;
+}

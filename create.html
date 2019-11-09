@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Todo</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/EditCreate.css">
+</head>
+
+<body>
+    <div id="alert">
+        Your Todo has been saved
+    </div>
+    <nav id="nav">
+        <h3>Project To-Do</h3>
+        <a href="index.html"><i class="material-icons">settings</i> My Day</a>
+        <a href="important.html"><i class="material-icons">star</i> Important</a>
+        <a href="tasks.html"><i class="material-icons">work</i> Tasks</a>
+    </nav>
+    <div id="menu" onclick="showNav(this)">
+        <span></span>
+        <span id='middleBor'></span>
+        <span></span>
+    </div>
+    <div>
+        <h1>Add new Todo</h1>
+        <form action="JavaScript:void(0)" method="POST">
+            <label>
+                <i class="material-icons">edit</i>
+                <div>
+                    Title
+                    <input type="text">
+                </div>
+            </label>
+            <label>
+                <i class="material-icons">room</i>
+                <div>
+                    Location
+                    <input type="text">
+                </div>
+            </label>
+            <label>
+                <i class="material-icons">edit</i>
+                <div>
+                    Description
+                    <input type="text">
+                </div>
+            </label>
+            <label><button onclick="createOrEditTodo('create')">Create</button></label>
+        </form>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/createOrEditTodo.js"></script>
+</body>
+
+</html>
