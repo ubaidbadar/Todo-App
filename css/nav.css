@@ -6,7 +6,6 @@ nav{
     box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.13);
     position: fixed;
     left: -288px;
-    transition: ease-in 0.3s all;
     top: 0;
 }
 nav h3{
@@ -43,7 +42,6 @@ nav a:hover{
     background: #fff;
     margin: 3px 0;
     margin-left: auto;
-    transition: linear 0.1s all;
 }
 #middleBor{
     width: 22px !important;
