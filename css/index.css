@@ -12,19 +12,18 @@ h3{
     margin-top: 8px;
 }
 .todoBox{
-    min-height: 72px;
     background: #fff;
     margin: 16px;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
     display: flex;
     align-items: center;
-    padding: 16px;
+    padding: 24px;
 }
 .check{
     border: 1px solid rgba(87, 87, 87, 1);
     padding: 0;
-    font-size: 12px !important;
-    margin-right: 6px;
+    font-size: 14px !important;
+    margin-right: 16px;
     color: #fff;
     font-weight: bold;
     border-radius: 2px;
@@ -56,4 +55,9 @@ h3{
     border-radius: 32px;
     font-weight: bold;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+}
+@media only screen and (max-width: 426px){
+    .btn{
+        font-size: 12px; 
+    }
 }

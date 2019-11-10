@@ -19,7 +19,7 @@ function createOrEditTodo(status = "edit") {
     if (status === "create") {
         createTodo(data)
     } else{
-
+        updateTodo(data);
     }
     for (var input of inputs) {
         input.value = '';
@@ -28,16 +28,4 @@ function createOrEditTodo(status = "edit") {
     setTimeout(()=>{
         document.getElementById('alert').style.top = '-48px';
     }, 2000)
-}
-
-function createTodo(data) {
-    // Get Data From LocalStorage
-    var allData = JSON.parse(localStorage.getItem('allData'));
-    if (allData == null) {
-        allData = [];
-    }
-    allData.push(data);
-
-    // localStorage.setItem('var_name', JSON.stringify("data"));
-    localStorage.setItem('allData', JSON.stringify(allData));
 }

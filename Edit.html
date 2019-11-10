@@ -29,34 +29,34 @@
     </div>
     <div>
         <h1>Edit Your Todo</h1>
-        <form action="JavaScript:void(0)" method="POST">
+        <form action="index.html" method="POST">
             <label>
                 <i class="material-icons">edit</i>
                 <div>
                     Title
-                    <input type="text">
+                    <input type="text" id="title">
                 </div>
             </label>
             <label>
                 <i class="material-icons">room</i>
                 <div>
                     Location
-                    <input type="text">
+                    <input type="text" id="loc">
                 </div>
             </label>
             <label>
                 <i class="material-icons">edit</i>
                 <div>
                     Description
-                    <input type="text">
+                    <input type="text" id="desc">
                 </div>
             </label>
-            <label><button onclick="createOrEditTodo('edit')">Update</button></label>
+            <label><button onclick="EditTodo()">Update</button></label>
         </form>
     </div>
 
     <script src="js/nav.js"></script>
-    <script src="js/createOrEditTodo.js"></script>
+    <script src="js/Update.js"></script>
 </body>
 
 </html>
