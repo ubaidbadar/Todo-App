@@ -16,9 +16,9 @@ function showData() {
                                     <i class="material-icons check ${checkClass}" onclick="Completed(${i})">check</i>
                                     <b>${title}</b>
                                     <div class="actions">
-                                        <a href="view.html" class="btn">View</a>
-                                        <a href="edit.html#${i}" class="btn marginlR grey">Edit</a>
-                                        <div class="btn red" onclick="Remove(${i})">Remove</div>
+                                        <a href="view.html" class="material-icons green">remove_red_eye</a>
+                                        <a href="edit.html#${i}" class="material-icons marginlR grey">edit</a>
+                                        <div class="material-icons red" onclick="Remove(${i})">delete</div>
                                     </div>
                                 </div>`
     }

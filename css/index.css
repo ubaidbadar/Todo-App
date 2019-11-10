@@ -1,6 +1,7 @@
 header{
     padding: 36px 16px 10px 16px;
     background: linear-gradient(#8bc34a , #4caf50);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
 }
 header *{
     color: #fff;
@@ -20,7 +21,7 @@ h3{
     padding: 24px;
 }
 .check{
-    border: 1px solid rgba(87, 87, 87, 1);
+    border: 1px solid #9e9e9e;
     padding: 0;
     font-size: 14px !important;
     margin-right: 16px;
@@ -40,10 +41,13 @@ h3{
     margin: 0 4px;
 }
 .grey{
-    background: rgba(87, 87, 87);
+    color: #9e9e9e;
 }
 .red{
-    background: red;
+    color: #f44336;
+}
+.green{
+    color: #8bc34a;
 }
 .addBtn{
     position: fixed;
@@ -56,8 +60,11 @@ h3{
     font-weight: bold;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
 }
-@media only screen and (max-width: 426px){
+@media only screen and (max-width: 560px){
     .btn{
         font-size: 12px; 
+    }
+    header{
+        padding: 16px 16px 6px 16px;
     }
 }

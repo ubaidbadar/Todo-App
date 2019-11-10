@@ -62,3 +62,11 @@ nav a:hover{
         width: 13px !important;
     }
 }
+@media only screen and (max-width: 600px){
+    nav{
+        min-width: 225px;
+    }
+    nav a{
+        padding: 12px 0;
+    }
+}
