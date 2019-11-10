@@ -17,7 +17,7 @@ function showData() {
                                     <b>${title}</b>
                                     <div class="actions">
                                         <a href="view.html" class="btn">View</a>
-                                        <a href="edit.html" class="btn marginlR grey">Edit</a>
+                                        <a href="edit.html#${i}" class="btn marginlR grey">Edit</a>
                                         <div class="btn red" onclick="Remove(${i})">Remove</div>
                                     </div>
                                 </div>`
