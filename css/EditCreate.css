@@ -1,5 +1,5 @@
 body{
-    background: #7B24FC;
+    background: #4caf50;
     color: #fff;
     font-size: 16px;
 }
@@ -15,11 +15,11 @@ input{
     border: none;
     border-bottom: 2px solid;
     display: block;
-    width: 99%;
-    padding: 10px 0 8px 0;
+    width: 100%;
+    padding: 9px 0 7px 0;
     font-size: 14px;
     box-sizing: border-box;
-    margin-top: 6px;
+    margin-top: 10px;
 }
 form{
     max-width: 700px;
@@ -32,14 +32,23 @@ label{
     margin-bottom: 32px;
 }
 label div{
+    margin: 0 32px 0 12px;
     flex-grow: 100;
 }
 label i{
-    margin: auto 12px 0 0;
+    margin-top: auto;
 }
 button{
-    margin-left: 32px;
+    margin: 0 32px;
     flex-grow: 100;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 2px;
 }
 #alert{
     width: 300px;
@@ -55,13 +64,16 @@ button{
     top: -48px;
 }
 input:focus{
-    background: #e1f5fe;
-    padding: 10px 10px 8px 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 9px 10px 7px 10px;
     color: #000;
 }
 
 @media only screen and (max-width: 600px){
     h1{
         margin: 42px 0 32px 0;
+    }
+    label div{
+        margin: 0 30px 0 6px;
     }
 }
