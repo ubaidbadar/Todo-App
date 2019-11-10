@@ -21,7 +21,7 @@ input{
     display: block;
     width: 99%;
     padding: 10px 0 8px 0;
-    font-size: 15px;
+    font-size: 14px;
     box-sizing: border-box;
     margin-top: 6px;
 }
@@ -41,16 +41,9 @@ label div{
 label i{
     margin: auto 12px 0 0;
 }
-input:focus{
-    background: #fff;
-    border-color: #8bc34a;
-    color: rgba(0, 0, 0, 0.8);
-    padding: 10px 10px 8px 10px;
-}
 button{
     margin-left: 32px;
     flex-grow: 100;
-    box-sizing: border-box;
 }
 #alert{
     width: 300px;
@@ -64,4 +57,9 @@ button{
     right: 0;
     z-index: 1;
     top: -48px;
+}
+input:focus{
+    background: #e1f5fe;
+    padding: 10px 10px 8px 10px;
+    color: #000;
 }
