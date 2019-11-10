@@ -1,0 +1,48 @@
+header{
+    padding: 36px 16px 10px 16px;
+    background: linear-gradient(#8bc34a , #4caf50);
+}
+header *{
+    color: #fff;
+}
+h1{
+    margin: 0;
+}
+h3{
+    margin-top: 8px;
+}
+.todoBox{
+    min-height: 72px;
+    background: #fff;
+    margin: 16px;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+.check{
+    border: 1px solid rgba(87, 87, 87, 1);
+    padding: 0;
+    font-size: 12px !important;
+    margin-right: 6px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.checked{
+    background: #8bc34a;
+    border-color: #8bc34a;
+}
+.actions{
+    margin-left: auto;
+    display: flex;
+}
+.marginlR{
+    margin: 0 4px;
+}
+.grey{
+    background: rgba(87, 87, 87);
+}
+.red{
+    background: red;
+}

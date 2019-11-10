@@ -13,7 +13,8 @@ function createOrEditTodo(status = "edit") {
         title: inputs[0].value,
         loc: inputs[1].value,
         desc: inputs[2].value,
-        date: date.getDate() + '/' + (date.getMonth() + +1) + '/' + date.getFullYear()
+        date: date.getDate() + '/' + (date.getMonth() + +1) + '/' + date.getFullYear(),
+        completed: false
     }
     if (status === "create") {
         createTodo(data)
