@@ -13,8 +13,7 @@ function showData() {
             checkClass = 'checked'
         }
         toolBoxes.innerHTML += `<div class="todoBox">
-                                    <i class="material-icons check ${checkClass}" onclick="Completed(${i})">check</i>
-                                    <b>${title}</b>
+                                    <i class="material-icons check ${checkClass}" onclick="Completed(${i})">check</i>${title}
                                     <div class="actions">
                                         <a href="view.html#${i}" class="material-icons green">remove_red_eye</a>
                                         <a href="edit.html#${i}" class="material-icons marginlR grey">edit</a>

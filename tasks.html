@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo App</title>
+    <title>Tasks</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
     <nav id="nav">
         <h3>Project To-Do</h3>
-        <a href="#" class="active"><i class="material-icons">settings</i> My Day</a>
+        <a href="index.html"><i class="material-icons">settings</i> My Day</a>
         <a href="important.html"><i class="material-icons">star</i> Important</a>
-        <a href="tasks.html"><i class="material-icons">work</i> Tasks</a>
+        <a href="#" class="active"><i class="material-icons">work</i> Tasks</a>
     </nav>
     <div id="menu" onclick="showNav(this)">
         <span></span>
@@ -25,13 +23,11 @@
         <span></span>
     </div>
     <header>
-        <h1>My Day</h1>
-        <h3>Today</h3>
+        <h1>Tasks</h1>
+        <h3>to be done</h3>
     </header>
     <div id="toolBoxes"></div>
     <a href="create.html" class="addBtn material-icons">add</a>
     <script src="js/nav.js"></script>
-    <script src="js/index.js"></script>
 </body>
-
 </html>

@@ -29,33 +29,24 @@
     </div>
     <div>
         <h1>Edit Your Todo</h1>
-        <form action="index.html" method="POST">
-            <label>
-                <i class="material-icons">edit</i>
-                <div>
-                    Title
-                    <input type="text" id="title">
-                </div>
-            </label>
-            <label>
-                <i class="material-icons">room</i>
-                <div>
-                    Location
-                    <input type="text" id="loc">
-                </div>
-            </label>
-            <label>
-                <i class="material-icons">edit</i>
-                <div>
-                    Description
-                    <input type="text" id="desc">
-                </div>
-            </label>
-            <label><button onclick="EditTodo()">Update</button></label>
+        <form action="index.html" onsubmit="EditTodo()" method="POST">
+            <div class="input-field">
+                <input type="text" id="title">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="loc">
+                <label for="loc">Location</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="desc">
+                <label for="desc">Description</label>
+            </div>
+            <button>Update</button>
         </form>
     </div>
-
     <script src="js/nav.js"></script>
+    <script src="js/CreateEdit.js"></script>
     <script src="js/Update.js"></script>
 </body>
 

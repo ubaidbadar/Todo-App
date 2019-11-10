@@ -1,15 +1,17 @@
 nav{
     min-width: 240px;
-    height: 100vh;
+    height: 100%;
     padding: 0 24px;
-    background: #ffffff;
+    background: #fff;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 1;
 }
 nav h3{
     margin: 32px 0 24px 0;
+    color: #000;
 }
 nav a{
     display: flex;
@@ -23,12 +25,16 @@ nav i{
     margin-right: 16px;
     color: #8bc34a;
 }
+nav a.active{
+    background: #e1f5fe;
+    font-weight: bold;
+}
 nav a:hover{
     background: #e1f5fe;
-    color: #000;
 }
 .openNav{
     left: -288px;
+    box-shadow: none;
 }
 #menu{
     position: fixed;
@@ -51,9 +57,11 @@ nav a:hover{
 @media only screen and (max-width: 1000px){
     nav{
         left: -288px;
+        box-shadow: none;
     }
     .openNav{
         left: 0;
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
     }
     #menu span{
         width: 18px;

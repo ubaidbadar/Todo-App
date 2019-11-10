@@ -6,14 +6,18 @@ document.getElementById('loc').value = data.loc;
 document.getElementById('desc').value = data.desc;
 
 function EditTodo() {
-    var inputs = document.getElementsByTagName('input');
+    inCheck = true;
     for (var input of inputs) {
         if (input.value === "") {
-            input.style.borderColor = "red";
-            return false;
+            input.className = "danger";
+            inCheck = false;
         } else {
-            input.style.borderColor = "white";
+            input.className = "filled";
         }
+    }
+    if (!inCheck) {
+        event.preventDefault();
+        return false
     }
     // Updating Data
     data.title = inputs[0].value;

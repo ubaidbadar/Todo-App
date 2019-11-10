@@ -30,27 +30,18 @@
     <div>
         <h1>Add new Todo</h1>
         <form action="JavaScript:void(0)" method="POST">
-            <label>
-                <i class="material-icons">edit</i>
-                <div>
-                    Title
-                    <input type="text">
-                </div>
-            </label>
-            <label>
-                <i class="material-icons">room</i>
-                <div>
-                    Location
-                    <input type="text">
-                </div>
-            </label>
-            <label>
-                <i class="material-icons">edit</i>
-                <div>
-                    Description
-                    <input type="text">
-                </div>
-            </label>
+            <div class="input-field">
+                <input type="text" id="title">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="loc">
+                <label for="loc">Location</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="desc">
+                <label for="desc">Description</label>
+            </div>
             <label><button onclick="create()">Create</button></label>
         </form>
     </div>

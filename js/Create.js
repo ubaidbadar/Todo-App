@@ -1,12 +1,17 @@
+var inputs = document.getElementsByTagName('input');
+let inCheck = true;
 function create() {
-    var inputs = document.getElementsByTagName('input');
+    check = true;
     for (var input of inputs) {
         if (input.value === "") {
-            input.style.borderColor = "red";
-            return false;
+            input.className = "danger";
+            inCheck = false;
         } else {
-            input.style.borderColor = "white";
+            input.className = "filled";
         }
+    }
+    if (!inCheck) {
+        return false;
     }
     var date = new Date();
     var data = {
@@ -29,4 +34,14 @@ function create() {
     setTimeout(() => {
         document.getElementById('alert').style.top = '-48px';
     }, 2000)
+}
+for (let input of inputs) {
+    input.onblur = function () {
+        if (this.value !== '') {
+            this.className = 'filled';
+        }
+        else {
+            this.className = 'danger'
+        }
+    }
 }
