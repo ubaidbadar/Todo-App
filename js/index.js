@@ -30,7 +30,7 @@ function Completed(i) {
 }
 
 function Remove(i){
-    allData.splice(i, 0);
+    allData.splice(i, 1);
     Modified();
 }
 
