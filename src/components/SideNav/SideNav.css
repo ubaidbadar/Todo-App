@@ -1,0 +1,87 @@
+nav{
+    min-width: 288px;
+    height: 100%;
+    padding: 0 24px;
+    background: #fff;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: ease 0.26s all;
+}
+nav h3{
+    margin: 32px 0 24px 0;
+    color: #000;
+    font-weight: normal;
+}
+nav a{
+    display: flex;
+    padding: 10px 16px;
+    align-items: center;
+    margin: 4px 0;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+}
+nav i{
+    margin-right: 16px;
+    color: #8bc34a;
+}
+nav a.active{
+    background: rgba(225, 245, 254, 0.8);
+    font-weight: bold;
+}
+nav a:hover{
+    background: rgba(225, 245, 254, 0.8);
+}
+.menu{
+    display: none;
+}
+@media only screen and (max-width: 1000px){
+    nav{
+        left: -288px;
+        box-shadow: none;
+    }
+    .openNav{
+        left: 0;
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+    }
+    .openNavMenu span{
+        width: 13px !important;
+    }
+    .menu{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+        display: none;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+      .menu span{
+        display: block;
+        height: 3px;
+        background: #fff;
+        width: 20px;
+        margin: 2px 0;
+        transition: ease 0.3s all;
+        margin-left: auto;
+      }
+      .menu .halfLine{
+        width: 12px;
+      }
+}
+@media only screen and (max-width: 600px){
+    nav{
+        min-width: 276px;
+        padding: 0 20px !important;
+    }
+    nav i{
+        margin-right: 12px;
+        color: #8bc34a;
+    }
+    nav a{
+        padding: 9px 12px;
+    }
+}

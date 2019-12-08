@@ -1,0 +1,30 @@
+.EditCreate button{
+    width: 100%;
+    margin-top: 10px;
+}
+.alert{
+    font-weight: bold;
+    color: #f44336;
+    margin: 8px 0 0 0;
+    font-size: 16px;
+}
+.successMessage{
+    color: #fff;
+    font-size: 16px;
+    background: #8bc34a;
+    padding: 10px 32px;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 12;
+    animation: successMessage forwards 0.3s ease;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+}
+@keyframes successMessage{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

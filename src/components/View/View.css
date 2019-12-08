@@ -1,0 +1,32 @@
+.view h3{
+    margin-bottom: 8px;
+}
+.basicInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+}
+.basicInfo div{
+    width: 166px;
+    display: flex;
+    align-items: center;
+}
+.basicInfo h3{
+    margin: 0 12px 0 0;
+}
+@media only screen and (max-width: 600px){
+    .basicInfo{
+        display: block;
+        margin: 0;
+    }
+    .basicInfo span{
+        margin-top: auto;
+    }
+    .basicInfo div{
+        width: auto;
+        margin-bottom: 18px;
+    }
+    .basicInfo h3{
+        width: 90px;
+    }
+}
