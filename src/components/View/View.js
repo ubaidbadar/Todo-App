@@ -16,7 +16,7 @@ class View extends Component {
                             <h3>Todo</h3>
                         </header>
                         <div className='card'>
-                            <h1>{this.state.todo.title}</h1>
+                            <h1>{this.state.todo.title} Todo</h1>
                             <div className='basicInfo'>
                                 <table>
                                     <thead>
@@ -33,7 +33,7 @@ class View extends Component {
                                             <td>{this.state.todo.completed ? 'Completed' : 'Incomplete'}</td>
                                             <td>{this.state.todo.important ? 'Yes' : 'No'}</td>
                                             <td>{this.state.expDate}</td>
-                                            <td>{this.state.expiresIn} left</td>
+                                            <td className={this.state.className}>{this.state.expiresIn}</td>
                                             <td>{this.state.todo.loc}</td>
                                         </tr>
                                     </tbody>
@@ -61,9 +61,14 @@ class View extends Component {
 
             let className = ''
             let expiresIn = (exDate.getTime() - new Date().getTime()) / 3600000;
-            if (expiresIn < 12 && !todo.completed) {
-                className = 'red'
+            
+            if (expiresIn < 12 && expiresIn > 0 && !todo.completed) {
+                className = 'expiring'
             }
+            else if (expiresIn < 0 && !todo.completed) {
+                className = 'expired'
+            }
+
             if (expiresIn < 0) {
                 expiresIn = '0 hour';
             }

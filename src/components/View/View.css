@@ -17,6 +17,27 @@ th, td{
 .basicInfo{
     overflow: auto;
 }
+.expiring{
+    font-weight: bold;
+    animation: expiring 2s infinite linear;
+}
+.expired{
+    color: red;
+}
+@keyframes expiring{
+    0%{
+        color: black;
+    }
+    30%{
+        color: red;
+    }
+    70%{
+        color: red;
+    }
+    100%{
+        color: black;
+    }
+}
 @media only screen and (max-width: 600px){
     th, td{
         padding: 8px;
