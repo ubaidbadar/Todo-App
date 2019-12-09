@@ -49,7 +49,7 @@ class EditCreate extends Component {
                 </header>
                 {this.state.success && <p className='successMessage'>Your Todo has been Saved</p>}
                 <form action='/' onSubmit={this.validation} className='card'>
-                <h1>{this.state.editMode ? 'Edit Existing' : 'Add New'} Todo</h1>
+                    <h1>{this.state.editMode ? 'Edit Existing' : 'Add New'} Todo</h1>
                     <Input label='Title' change={this.getValue} ki="title" value={this.state.title} elm={this.getElements} />
                     <Input label='Location' change={this.getValue} ki="loc" value={this.state.loc} elm={this.getElements} />
                     <Input label='Description' change={this.getValue} ki="desc" value={this.state.desc} elm={this.getElements} />
@@ -103,6 +103,14 @@ class EditCreate extends Component {
             } else {
                 this.props.history.push('/');
             }
+        } else {
+            const newDate = new Date();
+            let date = newDate.getDate().toString();
+            if (date.length < 2) {
+                date = 0 + date;
+            }
+            const dateFormate = newDate.getFullYear() + '-' + (newDate.getMonth() + 1) + '-' + date;
+            this.setState({ expiresIn: dateFormate })
         }
     }
 }
