@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class View extends Component {
-    state = {
-        todo: undefined
-    }
+    state = {}
     render() {
         return (
             <Fragment>
@@ -20,21 +18,27 @@ class View extends Component {
                         <div className='card'>
                             <h1>{this.state.todo.title}</h1>
                             <div className='basicInfo'>
-                                <div>
-                                    <h3>Status:</h3>
-                                    {this.state.todo.completed ? 'Completed' : 'Incomplete'}
-                                </div>
-                                <div>
-                                    <h3>Important:</h3>
-                                    {this.state.todo.important ? 'Yes' : 'No'}
-                                </div>
-                                <div>
-                                    <h3>Expires In:</h3>
-                                    {this.state.todo.expiresIn}
-                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>Important</th>
+                                            <th>Expiry Date</th>
+                                            <th>Expires In</th>
+                                            <th>Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{this.state.todo.completed ? 'Completed' : 'Incomplete'}</td>
+                                            <td>{this.state.todo.important ? 'Yes' : 'No'}</td>
+                                            <td>{this.state.expDate}</td>
+                                            <td>{this.state.expiresIn} left</td>
+                                            <td>{this.state.todo.loc}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <h3>Location:</h3>
-                            {this.state.todo.loc}
                             <h3>Description:</h3>
                             {this.state.todo.desc}
                         </div>
@@ -45,7 +49,37 @@ class View extends Component {
     }
     componentDidMount() {
         const todo = this.props.allTodos.find(todo => todo.id === this.props.match.params.id)
-        todo ? this.setState({ todo: todo }) : this.props.history.push('/');
+        if (todo) {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const exDate = new Date(todo.expiresIn);
+
+            let date = exDate.getDate().toString();
+            if (date.length < 2) {
+                date = 0 + date
+            }
+            const expDate = months[exDate.getMonth()] + ' ' + date + ', ' + exDate.getFullYear();
+
+            let className = ''
+            let expiresIn = (exDate.getTime() - new Date().getTime()) / 3600000;
+            if (expiresIn < 0) {
+                expiresIn = 0 + ' hour';
+            }
+            else if (expiresIn > 0 && expiresIn < 1) {
+                expiresIn = 'Less than 1 hour'
+            }
+            else if (expiresIn < 2) {
+                expiresIn = expiresIn.toFixed() + ' hour';
+            }
+            else {
+                expiresIn = expiresIn.toFixed() + ' hours'
+            }
+            if (expiresIn < 12 && !todo.completed) {
+                className = 'red'
+            }
+            this.setState({ todo: todo, expDate: expDate, expiresIn: expiresIn, className: className });
+        } else{
+            this.props.history.push('/')
+        }
     }
 }
 
