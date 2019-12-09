@@ -15,7 +15,16 @@ th, td{
     padding: 10px;
 }
 .basicInfo{
-    overflow: auto;
+    overflow-x: scroll;
+}
+.basicInfo::-webkit-scrollbar {
+    height: 10px;
+}
+.basicInfo::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.basicInfo::-webkit-scrollbar-thumb {
+    background: #888;
 }
 .expiring{
     font-weight: bold;
@@ -23,10 +32,11 @@ th, td{
 }
 .expired{
     color: red;
+    font-weight: bold;
 }
 @keyframes expiring{
     0%{
-        color: black;
+        color: #fff;
     }
     30%{
         color: red;
@@ -35,11 +45,6 @@ th, td{
         color: red;
     }
     100%{
-        color: black;
-    }
-}
-@media only screen and (max-width: 600px){
-    th, td{
-        padding: 8px;
+        color: #fff;
     }
 }
