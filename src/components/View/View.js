@@ -61,8 +61,11 @@ class View extends Component {
 
             let className = ''
             let expiresIn = (exDate.getTime() - new Date().getTime()) / 3600000;
+            if (expiresIn < 12 && !todo.completed) {
+                className = 'red'
+            }
             if (expiresIn < 0) {
-                expiresIn = 0 + ' hour';
+                expiresIn = '0 hour';
             }
             else if (expiresIn > 0 && expiresIn < 1) {
                 expiresIn = 'Less than 1 hour'
@@ -73,11 +76,8 @@ class View extends Component {
             else {
                 expiresIn = expiresIn.toFixed() + ' hours'
             }
-            if (expiresIn < 12 && !todo.completed) {
-                className = 'red'
-            }
             this.setState({ todo: todo, expDate: expDate, expiresIn: expiresIn, className: className });
-        } else{
+        } else {
             this.props.history.push('/')
         }
     }
