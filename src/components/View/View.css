@@ -15,7 +15,7 @@ th, td{
     padding: 10px;
 }
 .basicInfo{
-    overflow-x: scroll;
+    overflow: auto;
 }
 .basicInfo::-webkit-scrollbar {
     height: 10px;
@@ -24,7 +24,7 @@ th, td{
     background: #f1f1f1;
 }
 .basicInfo::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #a0a0a0;
 }
 .expiring{
     font-weight: bold;
