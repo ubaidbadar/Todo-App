@@ -25,7 +25,7 @@ class View extends Component {
                                             <th>Important</th>
                                             <th>Expiry Date</th>
                                             <th>Expires In</th>
-                                            <th>Location</th>
+                                            <th className='location'>Location</th>
                                         </tr>
                                     </thead>
                                     <tbody>

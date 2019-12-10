@@ -5,7 +5,6 @@ table{
     width: 100%;
     text-align: left;
     overflow: auto;
-    min-width: 520px;
     border-collapse: collapse;
 }
 th{
@@ -13,6 +12,10 @@ th{
 }
 th, td{
     padding: 10px;
+    min-width: 102px;
+}
+.location{
+    min-width: 150px;
 }
 .basicInfo{
     overflow: auto;
